@@ -5,9 +5,14 @@
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <title>🦜 Polyglot - Piratical PyScript</title>
       <script type="module" src="https://pyscript.net/snapshots/2023.09.1.RC2/core.js"></script>
+       <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </head>
 
     <body>
+       <script>
+          var WebApp = window.Telegram.WebApp;
+          WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+      </script>
       <h1>Polyglot 🦜 💬 🇬🇧 ➡️ 🏴‍☠️</h1>
       <p>Translate English into Pirate speak...</p>
       <input type="text" name="english" id="english" placeholder="Type English here..." />
