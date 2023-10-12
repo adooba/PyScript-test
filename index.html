@@ -10,17 +10,22 @@
 
     <body>
        <script>
+          function list_prop(obj) {
+            for (var key in obj) {
+              if (obj.hasOwnProperty(key)) {
+                console.log(' OWNER ->',key);
+              }
+              else {
+                console.log(' -> ',key);
+              }
+            }
+            return ''
+          }
           let WebApp = window.Telegram.WebApp;
-            for (var key in WebApp) {
-                if (WebApp.hasOwnProperty(key)) {
-                    console.log(' OWNER ->',key);
-                }
-               else {
-                   console.log(' -> ',key);
-                }
+          let initData = window.Telegram.WebApp.initData;
+          list_prop(initData);
           /* WebApp.showAlert(`Welcome @${WebApp.WebAppUser.username}.`);
            */
-           }
            WebApp.showAlert('Welcome');
        </script>
       <h1>Polyglot 🦜 💬 🇬🇧 ➡️ 🏴‍☠️</h1>
