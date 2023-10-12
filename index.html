@@ -22,9 +22,9 @@
             return ''
           }
           let WebApp = window.Telegram.WebApp;
-          var initData = window.Telegram.WebApp.initData;
+          var initData = WebApp.initDataUnsafe;
           //list_prop(initData);
-          WebApp.showAlert(`Welcome @${initData.WebAppUser.username}.`);
+          WebApp.showAlert(`Welcome @${initData.user.username}.`);
            //WebApp.showAlert('Welcome');
        </script>
       <h1>Polyglot 🦜 💬 🇬🇧 ➡️ 🏴‍☠️</h1>
