@@ -10,9 +10,19 @@
 
     <body>
        <script>
-          var WebApp = window.Telegram.WebApp;
-          WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
-      </script>
+          let WebApp = window.Telegram.WebApp;
+            for (var key in WebApp) {
+                if (WebApp.hasOwnProperty(key)) {
+                    console.log(' OWNER ->',key);
+                }
+               else {
+                   console.log(' -> ',key);
+                }
+          /* WebApp.showAlert(`Welcome @${WebApp.WebAppUser.username}.`);
+           */
+           }
+           WebApp.showAlert('Welcome');
+       </script>
       <h1>Polyglot 🦜 💬 🇬🇧 ➡️ 🏴‍☠️</h1>
       <p>Translate English into Pirate speak...</p>
       <input type="text" name="english" id="english" placeholder="Type English here..." />
